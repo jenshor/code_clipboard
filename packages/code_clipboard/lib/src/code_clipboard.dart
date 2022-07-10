@@ -2,6 +2,7 @@ import 'package:clipboard/clipboard.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+/// A simple Code Clipboard for Flutter to show and copy code snippets.
 class CodeClipboard extends StatelessWidget {
   /// Creates a new instance of [CodeClipboard].
   const CodeClipboard({
