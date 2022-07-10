@@ -1,11 +1,23 @@
 # code_clipboard
 
-[![style: very good analysis][very_good_analysis_badge]][very_good_analysis_link]
-[![License: MIT][license_badge]][license_link]
+This package provides a simple Code Clipboard for Flutter to show and copy code snippets.
 
-A Very Good Project created by Very Good CLI.
+## Usage
 
-[license_badge]: https://img.shields.io/badge/license-MIT-blue.svg
-[license_link]: https://opensource.org/licenses/MIT
-[very_good_analysis_badge]: https://img.shields.io/badge/style-very_good_analysis-B22C89.svg
-[very_good_analysis_link]: https://pub.dev/packages/very_good_analysis
+```dart
+CodeClipboard(
+  code: 'Line 1\nLine 2',
+)
+```
+
+## Options
+
+| Parameter         | Type           | Mandatory | Description |
+| ----------------- | -------------- | --------- | ----------- |
+| `code`            | `String`       | ✅        | The code displayed in the clipboard. |
+| `radius`          | `BorderRadius` | ➖        | The radius of the clipboard card. |
+| `foregroundColor` | `Color`        | ➖        | The color of the code text. Will be ignored if `textStyle` is set. |
+| `backgroundColor` | `Color`        | ➖        | The background color of the clipboard. |
+| `textStyle`       | `TextStyle`    | ➖        | The `TextStyle` of the displayed text/code. `foregroundColor` is ignored if this parameter is set. |
+| `iconColor`       | `Color`        | ➖        | The color of the copy icon. Does not apply to `copyIcon`. |
+| `copyIcon`        | `Widget`       | ➖        | Option to customize the icon to your icon theme. Defaults to `Icon(Icons.copy)`. |
