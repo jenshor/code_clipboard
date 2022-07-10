@@ -5,22 +5,12 @@
 // **************************************************************************
 
 import 'dart:core';
-
-import 'package:flutter/foundation.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:flutter/src/material/button.dart';
-import 'package:flutter/src/material/color_scheme.dart';
-import 'package:flutter/src/material/floating_action_button_theme.dart';
-import 'package:flutter/src/material/scaffold.dart';
-import 'package:flutter/src/material/text_theme.dart';
-import 'package:flutter/src/material/theme.dart';
-import 'package:flutter/src/material/theme_data.dart';
-import 'package:flutter/src/material/tooltip.dart';
-import 'package:flutter/widgets.dart';
-import 'package:widgetbook/widgetbook.dart';
+import 'package:clipboard/clipboard.dart';
 import 'package:code_clipboard_widgetbook/app.dart';
 import 'package:code_clipboard_widgetbook/components.dart';
+import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:widgetbook/widgetbook.dart';
 
 void main() {
   runApp(HotReload());
@@ -48,24 +38,22 @@ class HotReload extends StatelessWidget {
       categories: [
         WidgetbookCategory(
           name: 'use cases',
-          folders: [
-            WidgetbookFolder(
-              name: 'material',
-              widgets: [
-                WidgetbookComponent(
-                  name: 'FloatingActionButton',
-                  useCases: [
-                    WidgetbookUseCase(
-                      name: 'Default',
-                      builder: (context) => buildFab(context),
-                    ),
-                  ],
+          folders: [],
+          widgets: [
+            WidgetbookComponent(
+              name: 'CodeClipboard',
+              useCases: [
+                WidgetbookUseCase(
+                  name: 'Default',
+                  builder: (context) => buildCodeClipboard(context),
+                ),
+                WidgetbookUseCase(
+                  name: 'Multiline',
+                  builder: (context) => buildCodeClipboardMultiline(context),
                 ),
               ],
-              folders: [],
             ),
           ],
-          widgets: [],
         ),
       ],
     );
