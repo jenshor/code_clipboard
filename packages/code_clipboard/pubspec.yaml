@@ -1,6 +1,10 @@
 name: code_clipboard
 description: A Code Clipboard to show and copy code
-version: 0.0.0-beta.1
+version: 0.0.1-beta.1
+
+homepage: https://github.com/jenshor/code_clipboard
+repository: https://github.com/jenshor/code_clipboard
+issues: https://github.com/jenshor/code_clipboard/issues
 
 environment:
   sdk: ">=2.17.0 <3.0.0"
